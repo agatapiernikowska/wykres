@@ -1,0 +1,77 @@
+html {
+    font-size: 16px;
+}
+
+body {
+    /*font-family: "Open Sans", sans-serif;*/
+    margin: 2rem;
+}
+
+h1 {
+    text-align: right;
+}
+
+h2 {
+    padding-bottom: 3rem;
+}
+
+.container-fluid {
+    padding: 2rem;
+}
+
+.navigate-buttons {
+    text-align: right;
+    padding-top: 2rem;
+}
+
+.weather-data {
+    text-align: center;
+    margin-top: 1rem;
+}
+
+.weather-header {
+    text-align: left;
+}
+
+#weatherChart {
+    width: 75vw !important;
+    height: 75vh !important;
+}
+
+.weather-chart {
+    display: flex;
+    justify-content: center;
+}
+.form-control {
+    width: 5rem;
+    background-color: lightyellow;
+    margin: 0.8rem;
+    border: none;
+}
+
+.max {
+    background-color: lightgrey;
+}
+
+.min {
+    background-color: lightgrey;
+}
+
+.avg {
+    background-color: lightyellow;
+}
+
+
+
+.temp {
+    display: inline-block;
+}
+
+
+
+label {
+    width: 20rem;
+    font-weight: lighter;
+}
+
+.
