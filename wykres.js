@@ -1,4 +1,5 @@
 
+var dataset = [-10, -20, -28, -24, 55, 47, 14, 16 ,5 , 2, -8, -10];
 var chartOne = document.getElementById("weatherChart");
 var weatherChart = new Chart(chartOne, {
   type: 'bar',
@@ -109,3 +110,5 @@ var weatherChart = new Chart(chartOne, {
     }
   }
 });
+weatherChart.data.datasets[2].data = dataset
+weatherChart.update()
