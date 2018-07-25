@@ -1,5 +1,12 @@
 
 var dataset = [-10, -20, -28, -24, 55, 47, 14, 16 ,5 , 2, -8, -10];
+function dataset(){
+  var inps = document.querySelectorAll('.avg');
+  for (var i = 0; i <inps.length; i++) {
+    var inp=inps[i];
+    alert(inp.value);
+  }
+}
 var chartOne = document.getElementById("weatherChart");
 var weatherChart = new Chart(chartOne, {
   type: 'bar',
