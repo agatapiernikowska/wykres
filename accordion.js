@@ -18,10 +18,36 @@ $(".add").on("click", function () {
   $('.tabs a:last').tab('show');
   $('.tabs2 a:last').tab('show');
   $('.deleteZone').click(function () {
-    $newPanel.remove(hashClass);
-
+    $newPanel.remove();
   });
 });
+
+
+
+// dodawanie paneli do ekranu 6
+
+// $('.add').click(function () {
+//   var hashClass = 'zone-panel-' + generateHash()
+//   var nextTab = $('.tabs li').size()+1;
+//   $('<li><a href="#tab'+nextTab+'" data-toggle="tab">Zone '+nextTab+'</a></li>').appendTo('.tabs');
+//   $('<div class="tab-pane" id="tab"></div>').appendTo('.tab-content').addClass(hashClass);
+//   var nextTab2 = $('.tabs2 li').size()+1;
+//   $('<li><a href="#tab'+nextTab2+'" data-toggle="tab">Zone '+nextTab2+'</a></li>').appendTo('.tabs2');
+//   $('.tabs a:last').tab('show');
+//   $('.tabs2 a:last').tab('show');
+// });
+
+// dodawanie paneli do ekranu 7
+
+// $('.add').click(function () {
+//   let hashClass = 'zone-panel-' + generateHash()
+//   var nextTab2 = $('.tabs2 li').size()+1;
+//   $('<li><a href="#tab'+nextTab2+'" data-toggle="tab">Zone '+nextTab2+'</a></li>').appendTo('.tabs2');
+//   $('<div class="tab-pane" id="tab"></div>').appendTo('.tab-content')
+//   $('.tabs2 a:last').tab('show');
+// });
+
+
 
 
 // dodawanie losowego nr do klasy
