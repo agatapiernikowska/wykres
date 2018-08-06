@@ -6,46 +6,26 @@ $(".add").on("click", function () {
   var $newPanel = $foo.clone();
   var hashClass = 'zone-panel-' + generateHash();
   $newPanel.find(".collapse").removeClass("in");
-  $newPanel.find(".accordion-toggle").attr("href",  "#" + (++hash)).text("Zone " + hash);
+  $newPanel.find(".accordion-toggle").attr("href", "#" + (++hash)).text("Zone " + hash);
   $newPanel.find(".panel-collapse").attr("id", hash).addClass("collapse").removeClass("in");
   $($newPanel).addClass(hashClass);
   $("#accordion").append($newPanel.fadeIn());
-  var nextTab = $('.tabs li').size()+1;
-  $('<li><a href="#tab'+nextTab+'" data-toggle="tab">Zone '+nextTab+'</a></li>').appendTo('.tabs');
+  var nextTab = $('.tabs li').size() + 1;
+  $('<li class="' + hashClass + '"><a href="#tab' + nextTab + '" data-toggle="tab">Zone ' + nextTab + '</a></li>').appendTo('.tabs');
   $('<div class="tab-pane" id="tab"></div>').appendTo('.tab-content').addClass(hashClass);
-  var nextTab2 = $('.tabs2 li').size()+1;
-  $('<li><a href="#tab'+nextTab2+'" data-toggle="tab">Zone '+nextTab2+'</a></li>').appendTo('.tabs2');
+  var nextTab2 = $('.tabs2 li').size() + 1;
+  $('<li class="' + hashClass + '"><a href="#tab' + nextTab2 + '" data-toggle="tab">Zone ' + nextTab2 + '</a></li>').appendTo('.tabs2');
   $('.tabs a:last').tab('show');
   $('.tabs2 a:last').tab('show');
   $('.deleteZone').click(function () {
     $newPanel.remove();
+    $('.' + hashClass).remove();
   });
-});
+})
 
 
 
-// dodawanie paneli do ekranu 6
 
-// $('.add').click(function () {
-//   var hashClass = 'zone-panel-' + generateHash()
-//   var nextTab = $('.tabs li').size()+1;
-//   $('<li><a href="#tab'+nextTab+'" data-toggle="tab">Zone '+nextTab+'</a></li>').appendTo('.tabs');
-//   $('<div class="tab-pane" id="tab"></div>').appendTo('.tab-content').addClass(hashClass);
-//   var nextTab2 = $('.tabs2 li').size()+1;
-//   $('<li><a href="#tab'+nextTab2+'" data-toggle="tab">Zone '+nextTab2+'</a></li>').appendTo('.tabs2');
-//   $('.tabs a:last').tab('show');
-//   $('.tabs2 a:last').tab('show');
-// });
-
-// dodawanie paneli do ekranu 7
-
-// $('.add').click(function () {
-//   let hashClass = 'zone-panel-' + generateHash()
-//   var nextTab2 = $('.tabs2 li').size()+1;
-//   $('<li><a href="#tab'+nextTab2+'" data-toggle="tab">Zone '+nextTab2+'</a></li>').appendTo('.tabs2');
-//   $('<div class="tab-pane" id="tab"></div>').appendTo('.tab-content')
-//   $('.tabs2 a:last').tab('show');
-// });
 
 
 
