@@ -11,35 +11,35 @@ $(".add").on("click", function () {
     $newPanel.find(".panel-collapse").attr("id", hash).addClass("collapse").removeClass("in");
     $($newPanel).addClass(hashClass);
     $("#accordion").append($newPanel.fadeIn());
-
-    // panele
-
-    var $tablesSixScreen = $(".tablesScreenSix");
-    var $tablesSevenScreen = $(".tablesScreenSeven");
-
-    var nextTab = $('.tabs li').size()+1;
-    $('<li class="' + hashClass + '"><a href="#tab' + nextTab + '" data-toggle="tab">Zone ' + nextTab + '</a></li>').appendTo('.tabs');
-    $('<div class="tab-pane" id="tab'+nextTab+'"></div>').append($tablesSixScreen.clone()).appendTo('.tab-content').addClass(hashClass)
-
-    var nextTab2 = $('.tabs2 li').size()+1;
-    $('<li class="' + hashClass + '"><a href="#tab' + nextTab2 + '" data-toggle="tab">Zone ' + nextTab2 + '</a></li>').appendTo('.tabs2');
-    $('<div class="tab-pane" id="tab'+nextTab2+'"></div>').append($tablesSevenScreen.clone()).appendTo('.tab-content2').addClass(hashClass);
-
-    $('.tabs a:last').tab('show');
-    $('.tabs2 a:last').tab('show');
-
-
-    // usuwanie stref
-
-    $('.deleteZone').off('click').on('click', hashClass => {
-        $('.myModal')
-            .modal('show');
-    });
-    $('.myModal .removeZone').off('click').on('click', function () {
-        $('.' + $('#accordion .panel-heading:not(.collapsed)').data('hash') ).detach();
-        $('.myModal')
-            .modal('hide');
-    });
+    //
+    // // panele
+    //
+    // var $tablesSixScreen = $(".tablesScreenSix");
+    // var $tablesSevenScreen = $(".tablesScreenSeven");
+    //
+    // var nextTab = $('.tabs li').size()+1;
+    // $('<li class="' + hashClass + '"><a href="#tab' + nextTab + '" data-toggle="tab">Zone ' + nextTab + '</a></li>').appendTo('.tabs');
+    // $('<div class="tab-pane" id="tab'+nextTab+'"></div>').append($tablesSixScreen.clone()).appendTo('.tab-content').addClass(hashClass)
+    //
+    // var nextTab2 = $('.tabs2 li').size()+1;
+    // $('<li class="' + hashClass + '"><a href="#tab' + nextTab2 + '" data-toggle="tab">Zone ' + nextTab2 + '</a></li>').appendTo('.tabs2');
+    // $('<div class="tab-pane" id="tab'+nextTab2+'"></div>').append($tablesSevenScreen.clone()).appendTo('.tab-content2').addClass(hashClass);
+    //
+    // $('.tabs a:last').tab('show');
+    // $('.tabs2 a:last').tab('show');
+    //
+    //
+    // // usuwanie stref
+    //
+    // $('.deleteZone').off('click').on('click', hashClass => {
+    //     $('.myModal')
+    //         .modal('show');
+    // });
+    // $('.myModal .removeZone').off('click').on('click', function () {
+    //     $('.' + $('#accordion .panel-heading:not(.collapsed)').data('hash') ).detach();
+    //     $('.myModal')
+    //         .modal('hide');
+    // });
 });
 
 
